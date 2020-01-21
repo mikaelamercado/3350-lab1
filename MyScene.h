@@ -7,13 +7,15 @@
 class MyScene : public Scene
 {
     protected:
-
+        int x = 0;
+	int y = 0;
         // Called once when the scene begins.
         virtual void init()
         {
             // Keep this call to the parent's version of init()
             Scene::init();
-            // Your code here
+	    // Your code here
+             
 
 
         }
@@ -22,8 +24,9 @@ class MyScene : public Scene
         virtual void update()
         {
             // Your code here
-
-
+	    clearBoard();
+            board[y][x] = 'x';
+            x++;
 
 
             // Keep this call to the parent's version of update()
